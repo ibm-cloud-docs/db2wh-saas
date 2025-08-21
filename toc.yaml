@@ -8,9 +8,7 @@ toc:
     service-name: dashdb
     category: database
     audience: service
-    href: /docs/db2wh-saas?topic=Db2whc-getting-started
-    console-page: /catalog/services/db2-warehouse
-    product-page: https://www.ibm.com/cloud/db2-warehouse-on-cloud
+    href: /docs/db2wh-saas?topic=db2wh-saas-getting-started
     path: db2wh-saas
     label: Db2 Warehouse as a Service
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
