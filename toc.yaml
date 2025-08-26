@@ -1,0 +1,117 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: db2wh-saas
+    service-name: dashdb
+    category: database
+    audience: service
+    href: /docs/db2wh-saas?topic=db2wh-saas-getting-started
+    path: db2wh-saas
+    label: Db2 Warehouse as a Service
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      -  about.md
+      - getting-started.md
+      - topicgroup:
+          label: Connecting
+          topics:
+          - connecting/connecting.md
+          - connecting/connectivity_options.md
+          - connecting/connectivity_options_aws.md
+          - connecting/credentials.md
+          - connecting/dedicatedAWS.md
+          - connecting/ssl.md
+          - connecting/driver_pkg.md
+          - connecting/connect_programmatically.md
+          - connecting/connect_ibm_tools.md
+          - connecting/connect_3rd_party_tools.md
+          - connecting/rest_api.md 
+      - topicgroup:
+          label: Loading your data
+          topics:
+          - open_data.md
+          - load_local.md
+          - load_cos.md
+          - load_amazon_s3.md
+          - load_onprem.md
+          - dcw.md
+          - distrib_keys.md
+          - link:
+              label: Analyzing your data
+              href: https://www.ibm.com/docs/en/db2woc?topic=analyzing-your-data
+      - topicgroup:
+          label: Administration
+          topics:
+          - interfaces.md
+          - db_design.md 
+          - advanced_admin.md
+          - flex_scaling.md
+          - pauseandresume.md
+          - br.md
+          - dr.md
+          - link:
+              label: Replication
+              href: https://www.ibm.com/docs/en/db2woc?topic=replication-continuous-availability
+          - ha.md
+          - storage.md
+          - maintenance.md
+          - federation.md
+          - migrate_stand.md
+          - logical_schema.md
+          - command_syntax.md 
+      - topicgroup:
+          label: Security
+          topics:
+          - encryption.md
+          - inter_node.md
+          - iam.md
+          - user_mgmt.md
+          - roles.md
+          - rcac.md
+          - auditing.md
+          - sec_comp_sum.md
+          - key_protect.md
+          - logg_mon.md
+          - accesscont.md
+      - topicgroup:
+          label: Upgrade
+          topics:
+          - migr_gen2_gen3.md
+          - migr_faq.md
+      - db2-database-assistant.md
+      - communities.md
+      - link:
+              label: What's new
+              href: https://www.ibm.com/support/pages/whats-new-ibm-db2-warehouse-cloud
+  - navgroup:
+      id: howto
+      topics:
+      - provision.md
+      - link:
+              label: "IBM Demos: Tutorials, videos, and hands-on labs"
+              href: https://www.ibm.com/demos/collection/IBM-Db2-Warehouse-on-Cloud/
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your command line reference docs should be included in the Reference navigation group.
+  - navgroup:
+      id: reference
+      topics:
+      - link:
+              label: Database management API
+              href: https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v5
+      - link:
+              label: SQL reference
+              href: https://www.ibm.com/docs/en/db2woc?topic=reference-sql
+      - link:
+              label: Knowledge Center
+              href: https://www.ibm.com/docs/en/db2woc
+  - navgroup:
+      id: help
+      topics:
+      - faqs.md
+      - help.md
