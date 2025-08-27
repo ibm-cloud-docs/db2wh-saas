@@ -52,7 +52,7 @@ For information about posting questions on a forum or opening a support ticket, 
 
 {: #q_after_ibm_driven_upgrade}
 
-The implicit upgrade upgrades your system to the new generation of {{site.data.keyword.dashdbshort_notm}} and VPC Gen2 infrastructure, and also updates the database to the latest version automatically. This ensures that you immediately benefit from all new features introduced in the latest database version and no separate update action is required. Both v4 and v5 of the {{site.data.keyword.dashdbshort_notm}} REST API will remain fully functional after the upgrade.
+The implicit upgrade upgrades your system to the new generation of {{site.data.keyword.dashdbshort_notm}} and VPC Gen2 infrastructure, and also updates the database to the latest version automatically. This ensures that you immediately benefit from all new features introduced in the latest database version and no separate update action is required. Both [v4](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v4) and [v5](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v5) of the {{site.data.keyword.dashdbshort_notm}} REST API will remain fully functional after the upgrade.
 
 After the upgrade, the Web Console URL will be updated. Please note the following changes:
 
