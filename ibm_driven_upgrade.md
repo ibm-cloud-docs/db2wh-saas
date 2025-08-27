@@ -32,18 +32,21 @@ Outdated instance versions may be automatically upgraded to the next generation 
 
 {: #migr_move}
 
-To start saving on storage costs, you will need to move eligible data from block storage to cloud object storage and then shrink the freed block storage. The limitations on what type of tables are eligible can be found within this documentation. There are two ways to move tables:
+To start saving on storage costs, you will need to move eligble data from block storage to cloud object storage and then shrink the freed block storage. The limitations on what type of tables are eligible can be found within [this documentation](https://www.ibm.com/docs/en/db2w-as-a-service?topic=support-restrictions-limitations). There are two ways to move tables:
 
 1. Via the service console, utilizing the Table Explorer, where a single table at a time can be moved to the pre-created cloud object storage tablespace.
 
-2. Via a command line tool, which can automate bulk table moves and more. Details on how to install and use the tool can be found here.
+2. Via a command line tool, which can automate bulk table moves and more. Details on how to install and use the tool can be found [here](https://github.com/IBM/db2whmigratetocos).
+
 
 ## Shrink Block Storage
 
 {: #migr_shrink}
 
-After tables have been moved to cloud object storage, the block storage will need to be shrunk. The shrink operation can be performed as many times as required, however keep in mind that it is an offline operation and requires downtime. The shrink operation can be initiated via the service console as shown here.
-For information about posting questions on a forum or opening a support ticket, 
+After tables have been moved to cloud object storage, the block storage will need to be shrunk. The shrink operation can be performed as many times as required, however keep in mind that it is an offline operation and requires downtime. The shrink operation can be initiated via the service console as shown [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-scaling).
+
+For information about posting questions on a forum or opening a support ticket, see [Help & support](/docs/Db2whc?topic=Db2whc-help_support).
+
 
 ## What should I expect after the upgrade?
 
