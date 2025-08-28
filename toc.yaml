@@ -81,13 +81,9 @@ toc:
           - accesscont.md
       - topicgroup:
           label: Upgrade
-          topics:
-          - ibm_driven_upgrade.md
-          - topicgroup:
-              label: Upgrade via Self Service Upgrade Tool
-              topics:
-              - migr_gen2_gen3.md
-              - migr_faq.md
+          topics: 
+          - migr_gen2_gen3.md
+          - migr_faq.md
       - db2-database-assistant.md
       - communities.md
       - link:
