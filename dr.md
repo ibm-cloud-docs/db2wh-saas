@@ -65,12 +65,9 @@ When deployed on Amazon Web Services, the daily snapshot backup described in htt
 
 With the current generation of plans, the console allows you to copy backups to a separate region, and restore a backup to an instance in another region if needed. The region must be a supported region for Db2 Warehouse SaaS on Amazon Web Services. You are charged for the storage used for these copies, and for data transfer charges.
 
-### Previous Generation
 
-When deployed on AWS, the daily snapshot backup described in https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-br is also used for disaster recovery. This DR backup is encrypted and stored in Amazon Web Services S3 across 3 Availability Zones (AZs) in each region. Regional DR backups allow you to restore your instance to another zone in the same region if needed. The RPO for DR backups on Amazon Web Services is 24 hours. The RTO if a disaster occurs is approximately 4 hours.
 
 ## **Brazil: Supplementary Rule 14** (applies to systems provisioned for the Brazilian federal government)
 {: #rule_14}
 
 For the current generation of plans hosted on AWS, the disaster recovery (DR) option for {{site.data.keyword.dashdbshort_notm}} offerings is not available in Brazil for the federal government due to Supplementary Rule 14.
-
