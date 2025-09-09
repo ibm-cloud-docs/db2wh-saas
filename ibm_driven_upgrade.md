@@ -10,9 +10,9 @@ subcollection: db2wh-saas
 
 ---
 
-# IBM Driven Upgrade to Db2 Warehouse SaaS Next Generation 
+# Automatic Upgrade to Db2 Warehouse SaaS Next Generation 
 
-{: #ibm_driven_upgrade}
+{: #auto_upgrade}
 
  
 {:external: target="_blank" .external}
@@ -26,12 +26,12 @@ subcollection: db2wh-saas
 {:pre: .pre}
 {:video: .video}
 
-Outdated instance versions may be automatically upgraded to the next generation (Gen 3) of {{site.data.keyword.dashdblong}} during the scheduled maintenance window. This implicit upgrade ensures all environments are moved to Gen 3 and benefit from the latest enhancements with minimal manual intervention.
+ Instance on Db2 version 11.5 may be automatically upgraded to the next generation (Gen 3) of {{site.data.keyword.dashdblong}} during the scheduled maintenance window. This implicit upgrade ensures all environments are upgraded to Gen 3 and benefit from the latest enhancements with minimal manual intervention.
 
 
 ## What should I expect after the upgrade?
 
-{: #q_after_ibm_driven_upgrade}
+{: #q_after_auto_upgrade}
 
 The implicit upgrade upgrades your system to the new generation of {{site.data.keyword.dashdbshort_notm}} and VPC Gen2 infrastructure, and also updates the database to the latest version automatically. This ensures that you immediately benefit from all new features introduced in the latest database version and no separate update action is required. Both [v4](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v4) and [v5](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v5) of the {{site.data.keyword.dashdbshort_notm}} REST API will remain fully functional after the upgrade.
 

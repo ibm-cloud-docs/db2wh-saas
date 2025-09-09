@@ -6,7 +6,7 @@ lastupdated: "2024-10-16"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -79,7 +79,6 @@ Your Key Protect Integration configuration will be retained.
 ## FAQs Specific to Self-Service Upgrade Process
 
 {: #faq_selfservice}
-
 
 ### What is the testing period after the new system is created?
 

@@ -6,7 +6,7 @@ lastupdated: "2025-03-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
