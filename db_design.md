@@ -6,7 +6,7 @@ lastupdated: "2020-04-27"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -46,5 +46,33 @@ subcollection: Db2whc
   If you’re using a single-partitioned plan, there’s no need to worry about distribution keys because all of the data is stored on one data partition.
   {: note}
 
-- The Db2 engine includes many registry and environment variables, and database configuration parameters. As a SaaS offering, {{site.data.keyword.dashdbshort_notm}} is deployed with preconfigured variables and parameters to optimize performance. Changing any of these settings might result in adverse effects on database operation or performance and is therefore strongly discouraged. If you think your system might benefit from changes to some registry variables, environment variables, or database configuration parameters, open a support case to request guidance from our service experts.
 
+
+- The Db2 engine includes many registry and environment variables, and database configuration parameters. As a SaaS offering, IBM Db2 Warehouse SaaS is deployed with preconfigured variables and parameters to optimize performance.
+
+  Changing any of these settings might result in adverse effects on database operation or performance and is therefore **strongly discouraged**.
+
+  If you think your system might benefit from changes to some registry variables, environment variables, or database configuration parameters, open a support case to request guidance from our service experts.
+
+  Please note that IBM decides on any request for parameter customization on a case-by-case basis and may deny the request if it is not supported on your plan/instance.
+
+  Some of the customizations that can be requested include:
+
+  * **Time zone**  
+    The default time zone for your instance is **UTC**. You may request to modify it to a time zone of your choosing.
+
+  * **LOGSECOND**  
+    This configuration parameter specifies the number of **secondary transaction log files** that your database instance can dynamically allocate and use when the primary log files are exhausted.
+
+    By default, IBM Db2 Warehouse SaaS calculates an optimal value for `LOGSECOND` based on the instance block storage size. You may request an increase in the value of `LOGSECOND` if the block storage associated with your Db2 Warehouse SaaS instance is large enough to support the increase.
+
+    Even when the value of `LOGSECOND` is updated based on your request, subsequent changes in block storage size can result in changes to the value of `LOGSECOND`:
+
+    - During a **storage scale-up**, the value of `LOGSECOND` may increase if the customer-provided value falls short of IBM's calculated value.
+    - During a **storage shrink**, the value of `LOGSECOND` may be capped to a lower value if the customer-provided value cannot be supported by the block storage.
+
+    **Effective value of `LOGSECOND` on your instance = greater of 1 & 2 below:**
+
+    1. IBM calculated optimal value based on your block storage size  
+    2. Customer requested value  
+       *(Capped based on your instance block storage capacity)*
