@@ -6,7 +6,7 @@ lastupdated: "2024-10-16"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -76,17 +76,24 @@ Your audit policies and data will be retained. During the upgrade, auditing on y
 
 Your Key Protect Integration configuration will be retained.
 
-## What is the testing period after the new system is created?
+## FAQs Specific to Self-Service Upgrade Process
+
+{: #faq_selfservice}
+
+### What is the testing period after the new system is created?
+
 {: #q_test_period}
 
 After successfully creating the new system (Step 1), you have a 14-day period to test and complete the final upgrade process (Step 3). The trial end date will be displayed, and once the 14-day period is over, billing for the new instance will automatically begin. If the prior system has not been deleted by this point, it will also continue to incur charges.
 
-## What should I do if I encounter an error during any of the steps?
+### What should I do if I encounter an error during any of the steps?
+
 {: #q_error}
 
 While the upgrade process is robust, in the event an error does happen, you will receive a prompt stating, *“There was an error during this process. Please open a support ticket.”*. In such cases, simply open a support ticket as usual, and our support team will assist you in resolving the issue promptly.
 
-## What should I expect after the upgrade?
+### What should I expect after the upgrade?
+
 {: #q_after_upgrade}
 
 The self-service upgrade tool, will upgrade your system to the new generation of {{site.data.keyword.dashdbshort_notm}} and VPC Gen2 infrastructure on IBM Cloud. It will retain all other levels of software, including the underlying database. In order to take advantage of the capabilities in the new generation of the product, a database update option will be available to be applied. 
@@ -103,4 +110,3 @@ Private connectivity is a *regional service*, meaning that the Virtual Private E
 {: note}
 
 *VPN Connectivity:* If you currently connect via VPN, follow the instructions in the [VPN Connectivity guide](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-connect_options#vpn) to ensure proper setup after the upgrade.
-

@@ -79,7 +79,3 @@ The recovery point objective (RPO) for snapshot backups is 24 hours. The recover
 ## Logical schema backup and restore
 
 This feature provides the ability to do full, cumulative incremental, or delta incremental backup of a Db2 schema followed by full restore of the schema or table(s) within the schema. [Logical schema backup](https://www.ibm.com/docs/en/db2w-as-a-service?topic=database-schema-level-table-level-backup-restore) is a flexible and lightweight way to backup and restore table level data. 
-
-
-
-

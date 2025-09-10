@@ -10,9 +10,9 @@ subcollection: db2wh-saas
 
 ---
 
-# IBM Driven Upgrade
+# Automatic Upgrade to Db2 Warehouse SaaS Next Generation 
 
-{: #ibm_driven_upgrade}
+{: #auto_upgrade}
 
  
 {:external: target="_blank" .external}
@@ -26,33 +26,16 @@ subcollection: db2wh-saas
 {:pre: .pre}
 {:video: .video}
 
-Outdated instance versions may be automatically upgraded to the next generation (Gen 3) of {{site.data.keyword.dashdblong}} during the scheduled maintenance window. This implicit upgrade ensures all environments are moved to Gen 3 and benefit from the latest enhancements with minimal manual intervention.
-
-## Move Data from Block to Cloud Object Storage
-
-{: #migr_move}
-
-To start saving on storage costs, you will need to move eligble data from block storage to cloud object storage and then shrink the freed block storage. The limitations on what type of tables are eligible can be found within [this documentation](https://www.ibm.com/docs/en/db2w-as-a-service?topic=support-restrictions-limitations). There are two ways to move tables:
-
-1. Via the service console, utilizing the Table Explorer, where a single table at a time can be moved to the pre-created cloud object storage tablespace.
-
-2. Via a command line tool, which can automate bulk table moves and more. Details on how to install and use the tool can be found [here](https://github.com/IBM/db2whmigratetocos).
-
-
-## Shrink Block Storage
-
-{: #migr_shrink}
-
-After tables have been moved to cloud object storage, the block storage will need to be shrunk. The shrink operation can be performed as many times as required, however keep in mind that it is an offline operation and requires downtime. The shrink operation can be initiated via the service console as shown [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-scaling).
-
-For information about posting questions on a forum or opening a support ticket, see [Help & support](/docs/Db2whc?topic=Db2whc-help_support).
+ Instance on Db2 version 11.5 may be automatically upgraded to the next generation (Gen 3) of {{site.data.keyword.dashdblong}} during the scheduled maintenance window. This implicit upgrade ensures all environments are upgraded to Gen 3 and benefit from the latest enhancements with minimal manual intervention.
 
 
 ## What should I expect after the upgrade?
 
-{: #q_after_ibm_driven_upgrade}
+{: #q_after_auto_upgrade}
 
 The implicit upgrade upgrades your system to the new generation of {{site.data.keyword.dashdbshort_notm}} and VPC Gen2 infrastructure, and also updates the database to the latest version automatically. This ensures that you immediately benefit from all new features introduced in the latest database version and no separate update action is required. Both [v4](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v4) and [v5](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v5) of the {{site.data.keyword.dashdbshort_notm}} REST API will remain fully functional after the upgrade.
+
+The instances will be migrated to an "On demand" licensing model. Please work with the sales team to identify the licensing model for your instance. Login into the Console and make the appropriate change.
 
 After the upgrade, the Web Console URL will be updated. Please note the following changes:
 
@@ -81,3 +64,26 @@ Private connectivity is a *regional service*, meaning that the Virtual Private E
 {: note}
 
 *VPN Connectivity:* If you currently connect via VPN, follow the instructions in the [VPN Connectivity guide](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-connect_options#vpn) to ensure proper setup after the upgrade.
+
+## Storage Cost Optimization After Upgrade
+
+{: #storagecost_optmz}
+
+### Move Data from Block to Cloud Object Storage
+
+{: #migr_move}
+
+To start saving on storage costs, you will need to move eligble data from block storage to cloud object storage and then shrink the freed block storage. The limitations on what type of tables are eligible can be found within [this documentation](https://www.ibm.com/docs/en/db2w-as-a-service?topic=support-restrictions-limitations). There are two ways to move tables:
+
+1. Via the service console, utilizing the Table Explorer, where a single table at a time can be moved to the pre-created cloud object storage tablespace.
+
+2. Via a command line tool, which can automate bulk table moves and more. Details on how to install and use the tool can be found [here](https://github.com/IBM/db2whmigratetocos).
+
+
+### Shrink Block Storage
+
+{: #migr_shrink}
+
+After tables have been moved to cloud object storage, the block storage will need to be shrunk. The shrink operation can be performed as many times as required, however keep in mind that it is an offline operation and requires downtime. The shrink operation can be initiated via the service console as shown [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-scaling).
+
+For information about posting questions on a forum or opening a support ticket, see [Help & support](/docs/Db2whc?topic=Db2whc-help_support).

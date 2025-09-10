@@ -6,7 +6,7 @@ lastupdated: "2020-04-27"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -47,4 +47,3 @@ subcollection: Db2whc
   {: note}
 
 - The Db2 engine includes many registry and environment variables, and database configuration parameters. As a SaaS offering, {{site.data.keyword.dashdbshort_notm}} is deployed with preconfigured variables and parameters to optimize performance. Changing any of these settings might result in adverse effects on database operation or performance and is therefore strongly discouraged. If you think your system might benefit from changes to some registry variables, environment variables, or database configuration parameters, open a support case to request guidance from our service experts.
-

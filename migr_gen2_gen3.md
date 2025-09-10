@@ -6,7 +6,7 @@ lastupdated: "2025-03-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -22,7 +22,8 @@ subcollection: Db2whc
 {:pre: .pre}
 {:video: .video}
 
-# Upgrading your system to Db2 Warehouse SaaS Next Generation
+# Upgrade via Self Service Upgarde Tool to Db2 Warehouse SaaS Next Generation 
+
 {: #migr_gen2_gen3}
 
 In order to upgrade existing systems to the next generation (Gen 3) of {{site.data.keyword.dashdblong}}, a self-service upgrade tool has been provided and {{site.data.keyword.dashdbshort_notm}} users on {{site.data.keyword.Bluemix_notm}} Cloud will be invited individually to start using the tool. Upgrading to the next generation of {{site.data.keyword.dashdbshort_notm}}, unlocks opportunities to use {{site.data.keyword.Bluemix_notm}} Object Storage (COS) to store database data while increasing performance of your system and saving on storage costs. It also unlocks the use of open data formats such as DATALAKE tables, allowing for seamless access to other data within your enterprise for integrated workloads.
@@ -67,7 +68,6 @@ This step is crucial as it will unlock the new Cloud Object Storage native capab
 
 To start saving on storage costs, you will need to move eligble data from block storage to cloud object storage and then shrink the freed block storage. The limitations on what type of tables are eligible can be found within [this documentation](https://www.ibm.com/docs/en/db2w-as-a-service?topic=support-restrictions-limitations).
 There are two ways to move tables:
-
 - Via the service console, utilizing the Table Explorer, where a single table at a time can be moved to the pre-created cloud object storage tablespace.
 - Via a command line tool, which can automate bulk table moves and more. Details on how to install and use the tool can be found [here](https://github.com/IBM/db2whmigratetocos).
 
@@ -77,4 +77,3 @@ There are two ways to move tables:
 After tables have been moved to cloud object storage, the block storage will need to be shrunk. The shrink operation can be performed as many times as required, however keep in mind that it is an offline operation and requires downtime. The shrink operation can be initiated via the service console as shown [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-scaling).
 
 For information about posting questions on a forum or opening a support ticket, see [Help & support](/docs/Db2whc?topic=Db2whc-help_support).
-
