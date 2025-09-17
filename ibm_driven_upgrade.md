@@ -35,23 +35,39 @@ subcollection: db2wh-saas
 
 The implicit upgrade upgrades your system to the new generation of {{site.data.keyword.dashdbshort_notm}} and VPC Gen2 infrastructure, and also updates the database to the latest version automatically. This ensures that you immediately benefit from all new features introduced in the latest database version and no separate update action is required. Both [v4](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v4) and [v5](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v5) of the {{site.data.keyword.dashdbshort_notm}} REST API will remain fully functional after the upgrade.
 
-The instances will be migrated to an "On demand" licensing model. Please work with the sales team to identify the licensing model for your instance. Login into the Console and make the appropriate change.
+IBM Db2 Warehouse on Cloud Gen 3 now offers a Reserved Instance (RI) pricing model, enabling you to achieve significant savings on compute costs. By committing to a fixed term of either 1 year or 3 years, you can lower your expenses compared to the standard "On-Demand" pricing. This model is ideal for workloads with stable, long-term resource needs, providing both cost efficiency and predictable budgeting.
+
+**How to Select a Reserved Instance Plan**
+
+1. Log in to your IBM Cloud Console.
+2. Navigate to your Db2 Warehouse on Cloud instance, click on it.
+3. Click on **Go to UI**.
+4. In the console screen, click on **Administration**.
+5. Go to Settings/License, click on **Edit**.
+6. From the available options, select the 1-year or 3-year RI plan that best fits your business needs.
+
+The selected RI plan will automatically apply the discounted rate to your compute usage. You can see the updated pricing reflected in your billing dashboard.
+
+If you encounter any issues during this process or need assistance in choosing the right plan, engage your IBM seller. Your sales representative is ready to provide guidance and ensure a smooth transition to the Reserved Instance pricing model.
 
 After the upgrade, the Web Console URL will be updated. Please note the following changes:
 
 - **Before Upgrade**  
-  `https://<hostname>/console`
+    `https://<hostname>/console`
 
 - **After Upgrade**  
- Follow these steps to open the {{site.data.keyword.dashdbshort_notm}}  web console:
-  1. Navigate to the [IBM Cloud Resources list](https://cloud.ibm.com/resources).
-  2. Under the **Databases** section, select your Db2 Warehouse database.
-  3. Click the **Go to UI** button to launch the IBM Db2 Warehouse SaaS web console.
+    Follow these steps to open the {{site.data.keyword.dashdbshort_notm}} web console:
+    1. Navigate to the [IBM Cloud Resources list](https://cloud.ibm.com/resources).
+    2. Under the **Databases** section, select your Db2 Warehouse database.
+    3. Click the **Go to UI** button to launch the IBM Db2 Warehouse SaaS web console.
 
-Please make sure to update any bookmarks, scripts, or integrations that rely on the old URL.
+Please make sure to update any bookmarks, scripts, or integrations that rely on the console URL.
 {: note}
 
-For most customers, you can resume working with your data as before. However, certain customers may encounter specific circumstances requiring further actions:
+
+ 
+
+For most customers, you can resume working with your data as before. However, certain customers may encounter specific circumstances requiring further actions.   
 
 *Private Connections from IBM Cloud VPC:* If you have workloads running on IBM Cloud VPC, you can leverage private connectivity (Private Link) to connect securely to your Db2 Warehouse instances using IBM Cloud’s private network. Follow the steps outlined [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-connect_options#connecting-to-db2-warehouse-on-cloud-with-private-link).
 
