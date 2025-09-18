@@ -67,12 +67,12 @@ subcollection: db2wh-saas
   IBM decides on any request for parameter customization on a case-by-case basis and may deny the request if it is not supported on your plan/instance.
   {: note}
 
+  **Time zone customization**
+  The default time zone for your instance is **UTC**. If you need your database instance to use a specific timezone, you will need to open a support case with your timezone.
 
-  * **Time zone customization**  
-    The default time zone for your instance is **UTC**. If you need your database instance to use a specific timezone, you will need to open a support case with your timezone.
-
-  * **Transaction log space customization**  
-    If the active transaction log space for your database is insufficient, you will need to open a support case and request an increase. **Log file size (`LOGFILSIZ`)** and **number of primary log files (`LOGPRIMARY`)** are not customizable. **Number of secondary log files (`LOGSECOND`)** is a database configuration parameter that specifies how many secondary transaction log files your database instance can dynamically allocate and use when the primary log files are exhausted.
+  **Transaction log space customization** 
+  If the active transaction log space for your database is insufficient, you will need to open a support case and request an increase. **Log file size (`LOGFILSIZ`)** and **number of primary log files (`LOGPRIMARY`)** are not customizable. **Number of secondary log files (`LOGSECOND`)** is a database configuration parameter that specifies how many secondary transaction log files your database instance can dynamically allocate and use when the primary log files are exhausted.
+  
 
     IBM assigns an optimal `LOGSECOND` value based on the size of the block storage associated with your Db2 Warehouse SaaS instance. You may request an increase to this value, provided your instance's block storage is large enough to support it.
 
