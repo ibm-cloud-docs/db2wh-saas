@@ -71,7 +71,7 @@ subcollection: db2wh-saas
 
   The default time zone for your instance is **UTC**. If you need your database instance to use a specific timezone, you will need to open a support case with your timezone.
 
-  #### Transaction log space customization** 
+  #### Transaction log space customization 
 
   If the active transaction log space for your database is insufficient, you will need to open a support case and request an increase. **Log file size (`LOGFILSIZ`)** and **number of primary log files (`LOGPRIMARY`)** are not customizable. **Number of secondary log files (`LOGSECOND`)** is a database configuration parameter that specifies how many secondary transaction log files your database instance can dynamically allocate and use when the primary log files are exhausted.
   
