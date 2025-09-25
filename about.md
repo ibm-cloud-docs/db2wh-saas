@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -120,11 +120,3 @@ Support for additional AWS regions is coming soon.
 The previous generation of plans on AWS is available in N. Virginia, Oregon, Frankfurt, London, Tokyo, Seoul, Singapore, and Sydney.
 
 If you wish to provision a service instance in an AWS region not listed above, contact your local sales representative or open a [support case](https://cloud.ibm.com/unifiedsupport/supportcenter). You can also open a support case for information on deploying your {{site.data.keyword.dashdbshort_notm}} service in a network-isolated environment on AWS. 
-
-
-
-
-
-
-
-

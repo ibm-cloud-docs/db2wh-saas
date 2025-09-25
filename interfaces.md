@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2024-07-18"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -64,5 +64,3 @@ Configure your local environment to connect to your {{site.data.keyword.dashdbsh
    - [Installing on Mac OS X](/docs/Db2whc/connecting?topic=Db2whc-dr_pkg#install_dr_pkg_mac)
    - [Installing on Windows](/docs/Db2whc/connecting?topic=Db2whc-dr_pkg#install_dr_pkg_windows)
 3. [Configure the driver files](/docs/Db2whc/connecting?topic=Db2whc-dr_pkg#cfg_loc_env) for your {{site.data.keyword.dashdbshort_notm}} database.
-
-

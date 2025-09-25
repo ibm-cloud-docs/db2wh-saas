@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2024
-lastupdated: "2025-03-09"
+  years: 2014, 2025
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -61,7 +61,3 @@ CALL SYSPROC.ADMIN_CMD('LOAD FROM "S3::<s3-endpoint-url>::<s3-access-key-ID>::<s
 {: codeblock}
 
 For more information about the Db2 LOAD utility, see: [LOAD command](https://test.cloud.ibm.com/docs/Db2whc?topic=Db2whc-load_cos){: external}.
-
-
-
-

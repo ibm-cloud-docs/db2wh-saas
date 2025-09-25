@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -84,7 +84,3 @@ If the output from the previous SQL query indicates that storage usage on your i
 [ALTER TABLESPACE statement](https://www.ibm.com/support/knowledgecenter/SSEPGG_11.5.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000890.html){: external}
 
 [Distribution keys for multi-partitioned plans](/docs/Db2whc?topic=Db2whc-distribution_keys){: external}
-
-
-
-

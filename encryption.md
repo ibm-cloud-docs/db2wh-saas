@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2024-09-14"
+lastupdated: "2025-09-25"
 
 keywords: 
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -36,8 +36,3 @@ The following methods are used to secure your data:
 - Inter-node encryption is always enabled for the current generation of plans hosted on AWS, where available. It can optionally be enabled for your Flex or Flex Performance instance hosted on IBM Cloud. For more information, see [Inter-node encryption](/docs/Db2whc?topic=Db2whc-Inter-node)
 
 Encrypted connections are enforced by default. For more information, see [SSL connectivity](/docs/Db2whc?topic=Db2whc-ssl_support).
-
-
-
-
-

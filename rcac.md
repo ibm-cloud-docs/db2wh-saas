@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2024
-lastupdated: "2023-06-14"
+  years: 2014, 2025
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -46,11 +46,3 @@ Dr. Smith is restricted to seeing only Alice's data, as depicted in the followin
 You can apply RCAC rules to your {{site.data.keyword.dashdbshort_notm}} instance to enforce the hospital's policy.
 
 For more information about RCAC, see [RCAC overview](https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/rcac_overview.html){: external}.
-
-
-
-
-
-
-
-

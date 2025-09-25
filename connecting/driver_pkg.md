@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2023-05-05"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -259,5 +259,3 @@ Before attempting to connect to your {{site.data.keyword.dashdbshort_notm}} data
    - `<alias>` is an alias that you created with the **db2cli writecfg** command.
 
    By default, the DSN is created as a user DSN.
-
-

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2024-07-18"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -124,4 +124,3 @@ SSL connections to {{site.data.keyword.dashdbshort_notm}} are enforced by defaul
 
 
 For more information, see [Configuring Secure Sockets Layer (SSL) support in non-Java Db2 clients](https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.admin.sec.doc/doc/t0053518.html){: external}.
-

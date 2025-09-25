@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2024
-lastupdated: "2024-11-08"
+  years: 2014, 2025
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -46,4 +46,3 @@ Any node failure is immediately detected by the cloud provider's container servi
 Network connections are made highly available by provisioning your service with a redundant network interface card (NIC). 
 
 If the container service detects a network issue, pods and containers can automatically restart after a short downtime.
-

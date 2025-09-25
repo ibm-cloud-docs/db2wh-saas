@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2024-08-02"
+lastupdated: "2025-09-25"
 
 keywords: db2, Db2 Warehouse on Cloud, bring your own key, byok, crypto-shredding
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -51,7 +51,3 @@ Authorize {{site.data.keyword.keymanagementserviceshort}} for use with Db2 Wareh
 {: #kp-use}
 
 After you grant your Db2 Warehouse instance permission to use your keys, you supply the Key Protect information on the Console Administration -> Settings -> Manage Keys tab. You must provide the name of the Key Protect instance and the key that was created in the "Creating or adding a key in Key Protect" section. After the information is provided, you then migrate the instance to Key Protect managed keys. 
-
-
-
-

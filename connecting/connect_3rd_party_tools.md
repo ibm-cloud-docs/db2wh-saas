@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -290,9 +290,3 @@ Before attempting to connect to your {{site.data.keyword.dashdbshort_notm}} data
    `idaShowTables()`
 
    The console displays a list of all of the tables and views in the current schema.
-
-
-
-
-
-

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2025-03-19"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -213,4 +213,3 @@ You can specify an IP in either of the following formats:
 ### Description
 
 Each allowlist entry requires a description. This should be meaningful for identification—such as a customer name, project code, or employee ID.
-

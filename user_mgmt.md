@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2023-07-10"
+lastupdated: "2025-09-25"
 
 keywords: 
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 

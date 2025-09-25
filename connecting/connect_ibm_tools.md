@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2019-12-16"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -697,5 +697,3 @@ Before attempting to connect to your {{site.data.keyword.dashdbshort_notm}} data
    - If the connection is successful, click **OK** to return to the ODBC Data Source Administrator window, and then click **OK** to exit the window.
             
    - If the connection is not successful, note and correct any errors before you test the connection again.
-
-
