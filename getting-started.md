@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -37,15 +37,3 @@ After creating the {{site.data.keyword.dashdbshort_notm}} service, you can creat
 While logged in as the **IAM** user that provisioned the instance, you can log into the web console by clicking on the **Go to UI** button on the **Manage** tab. In order to activate and administer Q Replication, you must login as a **IAM** user with with appropiate priveleges.
 
 You can create database/JDBC users, which you will use to connect to the database, by navigating to the **Administration** --> **User Management** panel. Additionally, you may want to give admin access to an IAM user to allow them to use console administration functions such as user management, backup, and restore. Before you can add an IAM user in the console, you must first give the user access to the service in IAM". For more information, see [Identity and access management (IAM) on IBM Cloud](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-iam).
-
-
-
-
-
-
-
-
-
-
-
-

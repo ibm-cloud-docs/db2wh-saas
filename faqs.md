@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2025-02-10"
+lastupdated: "2025-09-25"
 
 keywords: 
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -86,4 +86,3 @@ You can find pricing information and deploy a {{site.data.keyword.dashdbshort_no
 {: support}
 
 For information about posting questions on a forum or opening a support ticket, see [Help & support](/docs/Db2whc?topic=Db2whc-help_support).
-

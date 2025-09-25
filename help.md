@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2024-03-14"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -61,6 +61,3 @@ When using the forums to ask a question, tag your question so that it is seen by
 See [Getting help](/docs/get-support?topic=get-support-getting-customer-support){:external} for more details about using the forums.
 
 For information about opening an IBM support ticket, or about support levels and ticket severities, see: [Working with support cases](/docs/get-support?topic=get-support-open-case#open-case){:external}.
-
-
-

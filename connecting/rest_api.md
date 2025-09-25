@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -29,5 +29,3 @@ You can use the REST API to access data, view and create database objects, admin
 
 - All plans hosted on IBM Cloud, and previous generation of plans hosted on AWS: [V4 REST API](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v4){: external}.
 - Current generation of plans hosted on AWS: [V5 REST API](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud/db2-warehouse-on-cloud-v5){: external}.
-
-

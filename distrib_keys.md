@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2025-01-18"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -80,7 +80,3 @@ If you specify `DISTRIBUTE BY RANDOM` when creating a table with a primary or un
 {: #default_behav}
 
 If you do not specify a distribution clause when creating a table in a multi-partitioned plan, a default hash distribution key is used.
-
-
-
-

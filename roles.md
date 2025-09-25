@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2023-06-23"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -44,6 +44,3 @@ Next, add your data science team to the `DATASCIENCE` role. Assuming that you ha
 Alice and Bob are now able to work on all of the data that is accessible to the `DATASCIENCE` role.
 
 For more information about user roles in {{site.data.keyword.dashdbshort_notm}}, see [User-defined user roles](https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/udef_user_roles.html){: external}.
-
-
-

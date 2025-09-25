@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2020-04-15"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -156,5 +156,3 @@ Db2 data virtualization (also known as federation) is supported by {{site.data.k
 This function is supported on all versions of {{site.data.keyword.dashdbshort_notm}}.
 
 - [Data virtualization (federation)](/docs/Db2whc?topic=Db2whc-data_virt_fed)
-
-

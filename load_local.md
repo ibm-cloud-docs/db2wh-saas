@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2025-03-09"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -29,8 +29,3 @@ You can load data in a delimited format file (CSV or TXT) from your local system
 {: shortdesc}
 
 When loading data through the web console, {{site.data.keyword.dashdbshort_notm}} autodetects and infers column types for your file. You can also configure delimiters and date/time formats for your data.
-
-
-
-
-

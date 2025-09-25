@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2024
-lastupdated: "2024-03-04"
+  years: 2014, 2025
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -121,11 +121,3 @@ After your table structure is in place, you can start moving your data. Lift CLI
 
 
 To download and install Lift, see the IBM Db2 Download Center: [Download Lift](https://epwt-www.mybluemix.net/software/support/trial/cst/programwebsite.wss?siteId=1120&tabId=5230&p=1&h=null){:external}.
-
-
-
-
-
-
-
-

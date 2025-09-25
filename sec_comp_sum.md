@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2025-09-25"
 
 keywords: security compliances, security, compliance, Db2 Warehouse on Cloud
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -41,5 +41,3 @@ For details about each of the security compliances, see [Details about security 
 | Flex on Amazon Web Services |  | ![checkmark](images/checkmark.png) |  | ![checkmark](images/checkmark.png) | ![checkmark](images/checkmark.png) |
 | Flex Performance on Amazon Web Services |  | ![checkmark](images/checkmark.png) |  | ![checkmark](images/checkmark.png) | ![checkmark](images/checkmark.png) |
 {: caption="Table 1. Summary of security compliances for the Flex service offering plans" caption-side="top"}
-
-

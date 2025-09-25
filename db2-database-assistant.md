@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-09-25"
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 

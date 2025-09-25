@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2019-12-11"
+lastupdated: "2025-09-25"
 
 keywords:
 
-subcollection: Db2whc
+subcollection: db2wh-saas
 
 ---
 
@@ -389,6 +389,3 @@ Before attempting to connect to your {{site.data.keyword.dashdbshort_notm}} data
    {: codeblock}
 
 5. From your local working directory, push the updates to {{site.data.keyword.Bluemix_notm}} by following the instructions in the "Getting Started" section of the PHP App in your {{site.data.keyword.Bluemix_notm}} dashboard. Then, restart the App in {{site.data.keyword.Bluemix_notm}} and view the App in a browser.
-
-
-
