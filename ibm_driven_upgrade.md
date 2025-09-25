@@ -50,24 +50,24 @@ The selected RI plan will automatically apply the discounted rate to your comput
 
 If you encounter any issues during this process or need assistance in choosing the right plan, engage your IBM seller. Your sales representative is ready to provide guidance and ensure a smooth transition to the Reserved Instance pricing model.
 
-After the upgrade, the Web Console URL will be updated. Please note the following changes:
+1. After the upgrade, the Web Console URL will be updated. Please note the following changes:
 
-- **Before Upgrade**  
-    `https://<hostname>/console`
+   - **Before Upgrade**  
+     `https://<hostname>/console`
 
-- **After Upgrade**  
-    Follow these steps to open the {{site.data.keyword.dashdbshort_notm}} web console:
-    1. Navigate to the [IBM Cloud Resources list](https://cloud.ibm.com/resources).
-    2. Under the **Databases** section, select your Db2 Warehouse database.
-    3. Click the **Go to UI** button to launch the IBM Db2 Warehouse SaaS web console.
+   - **After Upgrade**  
+     Follow these steps to open the {{site.data.keyword.dashdbshort_notm}} web console:
+     1. Navigate to the [IBM Cloud Resources list](https://cloud.ibm.com/resources).
+     2. Under the **Databases** section, select your Db2 Warehouse database.
+     3. Click the **Go to UI** button to launch the IBM Db2 Warehouse SaaS web console.
 
-Please make sure to update any bookmarks, scripts, or integrations that rely on the console URL.
-{: note}
+   > Please make sure to update any bookmarks, scripts, or integrations that rely on the console URL.
+   {: note}
 
 
  
 
-For most customers, you can resume working with your data as before. However, certain customers may encounter specific circumstances requiring further actions.   
+3. For most customers, you can resume working with your data as before. However, certain customers may encounter specific circumstances requiring further actions.   
 
 *Private Connections from IBM Cloud VPC:* If you have workloads running on IBM Cloud VPC, you can leverage private connectivity (Private Link) to connect securely to your Db2 Warehouse instances using IBM Cloud’s private network. Follow the steps outlined [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-connect_options#connecting-to-db2-warehouse-on-cloud-with-private-link).
 
