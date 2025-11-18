@@ -90,11 +90,11 @@ You can use IP allowlists to restrict access to your formation. Once an allowlis
 
 To enable IP allowlisting:
 
-1. Log in to **IBM Cloud** as admin.  
-2. Click **Administration** and navigate to **Settings**.  
-3. Click **Access restriction**.  
-4. Under **Allowlist IPs**, click **Add IP**.  
-5. Enter the **IP Address** and **Description** in the provided fields, then click **Add**.  
+1. Log in to **Db2 Warehouse Cloud Console**.  
+2. Click on **Administration** and navigate to **Settings**.  
+3. Click on **Access restriction**.  
+4. Under **Allowlist IPs**, click on **Add IP**.  
+5. Enter the **IP Address** and **Description** in the provided fields, then click on **Add**.  
 6. The added IP address will be displayed under **Allowlisted IPs**. Use **Add IP** to add more IPs to the allowlist.
 
 To disable IP allowlisting, delete the IPs under Allowlist IPs.
