@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2025-09-25"
+lastupdated: "2025-11-18"
 
 keywords:
 
@@ -199,9 +199,14 @@ You can use IP allowlists to restrict access to your formation. Once an allowlis
 
 To enable IP allowlisting:
 
-1. Open a support ticket with IBM Cloud.
-2. Provide the IP address to be allowlisted.
-3. Include a short description for the allowlist entry.
+1. Log in to **IBM Cloud** as admin.  
+2. Click **Administration** and navigate to **Settings**.  
+3. Click **Access restriction**.  
+4. Under **Allowlist IPs**, click **Add IP**.  
+5. Enter the **IP Address** and **Description** in the provided fields, then click **Add**.  
+6. The added IP address will be displayed under **Allowlisted IPs**. Use **Add IP** to add more IPs to the allowlist.  
+
+To disable IP allowlisting, delete the IPs under Allowlist IPs.
 
 ### IP Address Format
 
@@ -212,4 +217,4 @@ You can specify an IP in either of the following formats:
 
 ### Description
 
-Each allowlist entry requires a description. This should be meaningful for identification—such as a customer name, project code, or employee ID.
+Each allowlist entry requires a description. This should be meaningful for identification such as a customer name, project code, or employee ID.
