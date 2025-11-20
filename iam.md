@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2025-09-25"
+lastupdated: "2025-11-20"
 
 keywords: IAM, access token, api key
 
@@ -42,7 +42,19 @@ Users with an IBMid must be added to each database service instance by the datab
 ### Service IDs
 {: #iam_serviceid}
 
-A service ID identifies a service or application similar to how a user ID identifies a user. The service IDs are IDs that can be used by applications to authenticate with an {{site.data.keyword.Bluemix_notm}} service. A service ID represents a separate entity from the owning IBMid. Therefore, different authorities and permissions can be granted specific to the service ID within the database. Service IDs do not have passwords. An API key must be created for each service ID for the service ID to connect to the database service instance. For more information about service IDs, see: [Introducing {{site.data.keyword.Bluemix_notm}} IAM Service IDs and API Keys](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:external} and [Increase Information Security for Db2 on IBM Cloud](https://www.ibm.com/cloud/blog/increase-information-security-for-db2-on-ibm-cloud){:external}.
+A service ID identifies a service or application similar to how a user ID identifies a user. The service IDs are IDs that can be used by applications to authenticate with an {{site.data.keyword.Bluemix_notm}} service. A service ID represents a separate entity from the owning IBMid. Service IDs are persistent, meaning they are not affected if a user leaves the account, which prevents service disruption. 
+
+A service ID in {{site.data.keyword.Bluemix_notm}} provides a unique identity for applications or services, which allows them to access {{site.data.keyword.Bluemix_notm}} services without using individual user credentials. This identification is crucial for automation, security, and managing access at a service level, because it allows developers to assign specific permissions to the service ID and create API keys for authentication. An API key must be created for each service ID for the service ID to connect to the database service instance.
+
+When you implement a service ID with {{site.data.keyword.dashdbshort_notm}} consider the following guidance:
+
+- Create the ID using the **Service Credential** option in the Db2 console. Do not create an ID for use with Db2 by using the options found on **Manage** > **Access (IAM)** in the {{site.data.keyword.Bluemix_notm}} console.
+- Use the **Create new Service ID** choice in the Db2 console to generate the credential. After it is created, you can find the new service ID by going to **Manage** > **Access (IAM)** > **Service IDs**.
+- To assign the required service level access, select the service ID from **Manage** > **Access (IAM)** > **Service IDs**, then click **Access**.
+- There is a user name and password associated with the Db2 service credential. To view this user name, go to **Administrator** > **User Management** in the Db2 console. You should use this user name and password for database level activity.
+  - Note: You can transfer ownership of the database objects to this user name
+
+
 
 ## Roles and actions
 {: #iam_roles_actions}
