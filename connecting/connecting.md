@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2020
-lastupdated: "2025-09-25"
+  years: 2014, 2025
+lastupdated: "2025-11-20"
 
 keywords:
 
@@ -60,7 +60,7 @@ Before attempting to connect to your {{site.data.keyword.dashdbshort_notm}} data
 
    If your network is behind a firewall, confirm that communications are permitted on port number `50000` for standard protocols or port number `50001` for SSL connections.
 
-   Port number `50000` is permitted only when a risk document is signed.
+   Port number `50000` is permitted only when a risk document is signed. If users have multiple networks, ensure all the networks can communicate with IBM Database host.
   {: note}
 
 
