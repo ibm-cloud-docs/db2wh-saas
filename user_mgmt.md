@@ -82,4 +82,9 @@ Service action access is also controlled by IAM Roles. An IAM user can be assign
 {: caption="Table 2. Roles and service actions" caption-side="top"} 
 
 
+#### Password Policy 
+
+Administrators can update or delete the existing password policy, create new password policies, and assign a specific password policy to a user on the Manage Users console page, or by using REST API endpoints. 
+For more information, see [Password Policy](https://www.ibm.com/docs/en/db2w-as-a-service?topic=management-password-policy){: external} 
+
 For more information about user management, see [Database user management]( https://www.ibm.com/docs/en/db2woc?topic=SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/user_mgmnt.htm){: external}
