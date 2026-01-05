@@ -67,8 +67,6 @@ If you encounter any issues during this process or need assistance in choosing t
    > Please make sure to update any bookmarks, scripts, or integrations that rely on the console URL.
    {: note}
 
-
-
 2. For most customers, you can resume working with your data as before. However, certain customers may encounter specific circumstances requiring further actions.
 
 *Private Connections from IBM Cloud VPC:* If you have workloads running on IBM Cloud VPC, you can leverage private connectivity (Private Link) to connect securely to your Db2 Warehouse instances using IBM Cloud’s private network. Follow the steps outlined [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-connect_options#connecting-to-db2-warehouse-on-cloud-with-private-link).
