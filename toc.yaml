@@ -72,7 +72,6 @@ toc:
           - auditing.md
           - sec_comp_sum.md
           - key_protect.md
-          - logg_mon.md
           - accesscont.md
       - topicgroup:
           label: Upgrade

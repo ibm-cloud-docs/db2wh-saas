@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2026-01-07"
 
 keywords:
 
@@ -59,5 +59,3 @@ CALL SYSPROC.ADMIN_CMD('LOAD FROM "S3::<s3-endpoint-url>::<s3-access-key-ID>::<s
 :<s3-bucket-name>::<path-to-data-file>" OF <filetype> <additional-load-options> INTO <table-name>)
 ```
 {: codeblock}
-
-For more information about the Db2 LOAD utility, see: [LOAD command](https://test.cloud.ibm.com/docs/Db2whc?topic=Db2whc-load_cos){: external}.
