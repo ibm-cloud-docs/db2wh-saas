@@ -30,7 +30,7 @@ The [IBM Documentation for the service](https://www.ibm.com/docs/en/db2w-as-a-se
 {: attention}
 
 {{site.data.keyword.dashdblong}} is a fully-managed, elastic cloud data warehouse that delivers independent scaling of storage and compute. It delivers a highly optimized columnar data store, actionable compression, and in-memory processing to supercharge your analytics and machine learning workloads.
-{: shortdesc}
+
 
 ## Key features 
 
@@ -81,8 +81,6 @@ Train and run machine learning models directly in the {{site.data.keyword.dashdb
 {: #plans_cfgs}
 
 For information about the plans and configurations supported on IBM Cloud and Amazon Web Services (AWS), see [here](https://cloud.ibm.com/db2-wh).
-
-This set of documentation covers the detailed commands and reference topics for the Db2 engine that powers {{site.data.keyword.dashdbshort_notm}}. To find the IBM Cloud documentation for the offering, see [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-about). The IBM Cloud documentation covers the high-level functionality for the cloud offering, and refers back to this set of documentation where appropriate. {: attention}
 
 ## Supported cloud providers and data centers
 
