@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2026-01-08"
 
 keywords:
 
@@ -23,12 +23,17 @@ subcollection: db2wh-saas
 {:attention: .attention}
 
 # About 
+
 {: #about}
 
+The [IBM Documentation for the service](https://www.ibm.com/docs/en/db2w-as-a-service) covers the detailed commands and reference topics for the Db2 engine that powers IBM Db2 Warehouse SaaS. The IBM Cloud documentation covers the high-level functionality for the cloud offering, and refers back to this set of documentation where appropriate.
+{: attention}
+
 {{site.data.keyword.dashdblong}} is a fully-managed, elastic cloud data warehouse that delivers independent scaling of storage and compute. It delivers a highly optimized columnar data store, actionable compression, and in-memory processing to supercharge your analytics and machine learning workloads.
-{: shortdesc}
+
 
 ## Key features 
+
 {: #key_features}
 
 ### Blazingly-fast engine
@@ -72,17 +77,19 @@ Day-to-day operations for {{site.data.keyword.dashdbshort_notm}}, including data
 Train and run machine learning models directly in the {{site.data.keyword.dashdbshort_notm}} engine, using SQL, Python, or R. {{site.data.keyword.dashdbshort_notm}} also supports spatial analytics with Esri compatibility, including Esri data types such as GML, and integration with Jupyter Notebooks.
 
 ## Plans and configurations 
+
 {: #plans_cfgs}
 
 For information about the plans and configurations supported on IBM Cloud and Amazon Web Services (AWS), see [here](https://cloud.ibm.com/db2-wh).
 
-This set of documentation covers the detailed commands and reference topics for the Db2 engine that powers {{site.data.keyword.dashdbshort_notm}}. To find the IBM Cloud documentation for the offering, see [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-about). The IBM Cloud documentation covers the high-level functionality for the cloud offering, and refers back to this set of documentation where appropriate. {: attention}
 ## Supported cloud providers and data centers
+
 {: #sup_cp_dc}
 
 {{site.data.keyword.dashdbshort_notm}} can be deployed on both {{site.data.keyword.cloud_notm}} and Amazon Web Services.
 
 ### Availability of plans in IBM Cloud data centers
+
 {: #availability}
 
 The following table provides information about the availability of the various {{site.data.keyword.dashdbshort_notm}} plans by {{site.data.keyword.cloud_notm}} data centers that are located in geographical regions:
@@ -105,6 +112,7 @@ The following table provides information about the availability of the various {
 For information on deploying your {{site.data.keyword.dashdbshort_notm}} service in a network-isolated environment on the IBM Cloud, open a [support case](https://cloud.ibm.com/unifiedsupport/supportcenter). {: external}
 
 ### Availability of plans in Amazon Web Services data centers
+
 {: #availability_aws}
 
 The current generation of plans on AWS is available in the following data centers:
