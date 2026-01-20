@@ -77,6 +77,39 @@ IBM handles all of the software upgrades, operating system updates, and hardware
 
 The service includes 24x7 health monitoring of the database and infrastructure. In the event of a hardware or software failure, the service is automatically restarted. Because {{site.data.keyword.dashdbshort_notm}} is a fully-managed SaaS offering, you do not get SSH access or root access to the underlying server hardware, and cannot install additional software.
 
+## Troubleshooting AWS‑specific issues
+
+{: #q_awstroubleshooting}
+{: faq}
+{: support}
+
+### Why are manual changes to workload monitoring settings not retained on Db2 Warehouse on Cloud instances hosted on AWS?
+
+On Db2 Warehouse on Cloud service instances hosted on AWS, manual changes to workload monitoring settings are not retained. For example, disabling activity data collection for a workload such as `GGATE` using:
+
+`ALTER WORKLOAD "GGATE" COLLECT ACTIVITY DATA NONE;`
+
+The setting is periodically overwritten (every 10 minutes or based on the configured collection interval).
+
+#### Cause
+
+This behaviour occurs due to recurring configuration resets when the **Activity Event Monitor (RTMON_EVMON_ACTIVITIES)** is enabled in AWS-hosted environments.
+
+#### Workaround
+
+To maintain selective disabling of activity data collection while keeping overall monitoring active:
+
+1. Create a stored procedure to check and update the workload’s activity data collection setting.
+2. Schedule an admin task to execute the procedure every minute.
+
+This ensures the desired workload setting is reapplied automatically.
+
+### Notes
+
+- This issue is specific to Db2 Warehouse on Cloud instances hosted on AWS.  
+- If you encounter similar behaviour, apply the workaround above.  
+- Contact IBM Support if the problem persists.
+
 ## Where can I find more information about Db2 Warehouse as a Service?
 
 {: #q_info}
@@ -94,32 +127,3 @@ You can find pricing information and deploy a {{site.data.keyword.dashdbshort_no
 {: support}
 
 For information about posting questions on a forum or opening a support ticket, see [Help & support](/docs/Db2whc?topic=Db2whc-help_support).
-
-## Troubleshooting AWS‑specific issues
-
-### Symptom
-
-On Db2 Warehouse on Cloud service instances hosted on AWS, manual changes to workload monitoring settings are not retained. For example, disabling activity data collection for a workload such as `GGATE` using:
-
-`ALTER WORKLOAD "GGATE" COLLECT ACTIVITY DATA NONE;`
-
-The setting is periodically overwritten (every 10 minutes or based on the configured collection interval).
-
-### Cause
-
-This behaviour occurs due to recurring configuration resets when the **Activity Event Monitor (RTMON_EVMON_ACTIVITIES)** is enabled in AWS-hosted environments.
-
-### Workaround
-
-To maintain selective disabling of activity data collection while keeping overall monitoring active:
-
-1. Create a stored procedure to check and update the workload’s activity data collection setting.
-2. Schedule an admin task to execute the procedure every minute.
-
-This ensures the desired workload setting is reapplied automatically.
-
-### Notes
-
-- This issue is specific to Db2 Warehouse on Cloud instances hosted on AWS.  
-- If you encounter similar behaviour, apply the workaround above.  
-- Contact IBM Support if the problem persists.
