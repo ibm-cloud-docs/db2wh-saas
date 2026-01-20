@@ -104,7 +104,7 @@ To maintain selective disabling of activity data collection while keeping overal
 
 This ensures the desired workload setting is reapplied automatically.
 
-### Notes
+#### Notes
 
 - This issue is specific to Db2 Warehouse on Cloud instances hosted on AWS.  
 - If you encounter similar behaviour, apply the workaround above.  
