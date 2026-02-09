@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2026-01-26"
+lastupdated: "2026-02-09"
 
 keywords:
 
@@ -156,6 +156,7 @@ IBM Cloud private link is only supported on Current Generation deployments.
 {: note}
 
 ### Prerequisites
+{: #connect_prereq}
 Before enabling Private Link, ensure the following are available in your environment: 
 
 - A Virtual Private Cloud (VPC)  
@@ -172,7 +173,7 @@ Log in to the {{site.data.keyword.dashdbshort_notm}} console. The console can be
 
 ### Step 2: Enable private endpoints
 
-In the {{site.data.keyword.dashdbshort_notm}}console:  
+In the {{site.data.keyword.dashdbshort_notm}} console:  
 1. Navigate to **Settings → Access restriction**.  
 2. Enable **Private endpoints**.  
 3. Click **Update**.  
@@ -181,11 +182,11 @@ It may take a few seconds to enable the private link, optionally, you can also d
 
 ![View of the web console Access Restrictions tab](images/step2_pvtendpoint.png){: caption="A screenshot of enabling private endpoints" caption-side="bottom"}
 
-### Step 3: Connect using private endpoints
+### Step 3: View private connection details
 
-After creating the **Virtual Private Endpoint Gateway** (see Step 4), you can connect to the database using the private hostname and port available in the **Connections** tab of the Db2 Warehouse console.  Make sure to toggle to **Private endpoints**.
+After enabling private endpoints, you can find the private hostname in the Db2 Warehouse console connections tab. Make sure the toggle is set to Private endpoints. These details will be used when creating the Virtual Private Endpoint Gateway (Step 4).
 
-![View of the connection configuration resources](images/confpvt_endpt.png)
+![View of the connection configuration resources](images/connect_confgres.png)
 
 ### Step 4: Create a Virtual Private Endpoint Gateway
 
@@ -201,11 +202,17 @@ After creating the **Virtual Private Endpoint Gateway** (see Step 4), you can co
 The Virtual Private Endpoint Gateway must be created in the same account as the Db2 Warehouse instance.  
 {: note}
 
+### Step 5: Allow TCP traffic on port 50001
+
 Ensure that TCP traffic is allowed through port **50001** on the VPC.
 
-### Step 5: Connect from your VPC
+### Step 6: Connect to Db2 Warehouse instance
 
-Once the VPE gateway is created successfully, you can connect to the Db2 Warehouse instance from your IBM Cloud VPC using the details in the **Private connections** tab (Step 3).
+Once the [VPE-endpoint-gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui) is created successfully, you can connect to the Db2 Warehouse instance from your IBM Cloud VPC using the details in the **Private connections** tab (Step 3).
+
+### Step 7: Access Db2 Warehouse console privately
+
+After creating [VPE-endpoint-gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui), you can access the Db2 Warehouse on Cloud console privately from your IBM Cloud VPC by replacing the public console hostname with the hostname listed as Rest API host name (Step 3).
 
 #### Additional resources
 
