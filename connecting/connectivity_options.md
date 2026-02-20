@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2026-02-09"
+lastupdated: "2026-02-20"
 
 keywords:
 
@@ -147,23 +147,23 @@ After receipt of your request, {{site.data.keyword.cloud_notm}} technicians will
 
 ![Public network access to {{site.data.keyword.cloud_notm}} through a VPN](images/public_connection_vpn.png "Graphical representation of user to cloud connection"){: caption="Figure 2. Public network access to {{site.data.keyword.cloud_notm}} through a VPN" caption-side="bottom"}
 
-## Connecting to {{site.data.keyword.dashdblong}} with Private Link
+## Connecting to {{site.data.keyword.dashdblong}} with Private Connection
 {: #connect_pvtendpt}
 
-IBM Cloud private link gives you the ability to securely and privately connect to a {{site.data.keyword.dashdblong}} instance from your own IBM Cloud VPCs. With the IBM Cloud Private Link, traffic between {{site.data.keyword.dashdblong}} and your IBM Cloud VPCs, it does not traverse the public internet.
+IBM Cloud private connection gives you the ability to securely and privately connect to a {{site.data.keyword.dashdblong}} instance from your own IBM Cloud VPCs. With the IBM Cloud Private connection, traffic between {{site.data.keyword.dashdblong}} and your IBM Cloud VPCs, it does not traverse the public internet.
 
-IBM Cloud private link is only supported on Current Generation deployments.
+IBM Cloud private connection is only supported on Current Generation deployments.
 {: note}
 
 ### Prerequisites
 {: #connect_prereq}
-Before enabling Private Link, ensure the following are available in your environment: 
+Before enabling Private connection, ensure the following are available in your environment: 
 
 - A Virtual Private Cloud (VPC)  
 
 - At least one subnet in an availability zone (required to create the Virtual Private Endpoint (VPE) Gateway) 
 
-Complete the following steps to connect {{site.data.keyword.dashdblong}} with  private link:
+Complete the following steps to connect {{site.data.keyword.dashdblong}} with  private connection:
 
 
 
@@ -178,7 +178,7 @@ In the {{site.data.keyword.dashdbshort_notm}} console:
 2. Enable **Private endpoints**.  
 3. Click **Update**.  
 
-It may take a few seconds to enable the private link, optionally, you can also disable public endpoints.
+It may take a few seconds to enable the private connection, optionally, you can also disable public endpoints.
 
 ![View of the web console Access Restrictions tab](images/step2_pvtendpoint.png){: caption="A screenshot of enabling private endpoints" caption-side="bottom"}
 
@@ -204,7 +204,7 @@ The Virtual Private Endpoint Gateway must be created in the same account as the 
 
 ### Step 5: Allow TCP traffic on port 50001
 
-Ensure that TCP traffic is allowed through port **50001** on the VPC.
+Ensure that TCP traffic is allowed through port **50001** and **443** on the VPC.
 
 ### Step 6: Connect to Db2 Warehouse instance
 
@@ -220,7 +220,7 @@ For more information, see [Ordering an endpoint gateway](https://cloud.ibm.com/d
 
 ### Consideration and Limitations
 
-- You must create the Virtual private endpoint gateway for accessing {{site.data.keyword.dashdbshort_notm}} through private link.
+- You must create the Virtual private endpoint gateway for accessing {{site.data.keyword.dashdbshort_notm}} through private connection.
 
 - The details required for creating Virtual private endpoint gateway will be available in private connection details tab present in the {{site.data.keyword.dashdbshort_notm}} console (step 3 above).
 
