@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2026-01-05"
+lastupdated: "2026-03-10"
 
 keywords:
 
@@ -77,6 +77,9 @@ To enable private connectivity:
    * Then, create a *Virtual Private Endpoint Gateway* on your VPC. The private endpoint and port will be provided in the Connections section of the console.
 
 Private connectivity is a *regional service*, meaning that the Virtual Private Endpoint Gateway must be created in the same region as your Db2 Warehouse on Cloud instance.
+{: note}
+
+As other IBM SaaS services run in their own IBM Cloud accounts, private access to the database requires those service teams to establish connectivity to Db2 Warehouse on Cloud using [VPE-based Private Connectivity patterns](https://cloud.ibm.com/docs/overview?topic=overview-endpoints-support#vpe-overview).
 {: note}
 
 *VPN Connectivity:* If you currently connect via VPN, follow the instructions in the [VPN Connectivity guide](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-connect_options#vpn) to ensure proper setup after the upgrade.
