@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2019
-lastupdated: "2025-11-18"
+lastupdated: "2026-04-07"
 
 keywords:
 
@@ -59,7 +59,7 @@ If you'd like to use AWS PrivateLink with {{site.data.keyword.dashdbshort_notm}}
 {: #PrivateWebConsole}
 
 - When you enable private endpoint, the private web console becomes available. When private endpoint is enabled, you can still access a lite version of the web console to get connection information.
-- Should you want to use the private web console, use the same AWS endpoint created from the above steps, but ensure that TCP traffic is allowed through port 8443 on your VPC.
+- Should you want to use the private web console, use the same AWS endpoint created from the above steps, but ensure that TCP traffic is allowed through port 443 on your VPC.
     
 
 #### Considerations and limitations
