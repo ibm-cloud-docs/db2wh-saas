@@ -30,13 +30,13 @@ subcollection: db2wh-saas
 
 For information about using the REST API to pause and resume, see [REST API](https://cloud.ibm.com/apidocs/db2-warehouse-on-cloud){: external}.
 
-When your system is paused the system's compute is scaled down which disables data access. It will also pause compute billing for the system.
+- When your system is paused the system's compute is scaled down which disables data access. It will also pause compute billing for the system.
 
-When your system is resumed, compute billing will be resumed. Compute will scale back up. It will take a similar amount of time to a compute scaling operation for the system to become available again.
+- When your system is resumed, compute billing will be resumed. Compute will scale back up. It will take a similar amount of time to a compute scaling operation for the system to become available again.
 
-If your system is paused during a scheduled update, it will automatically be resumed during the scheduled update time period and will billed accordingly.
+- If your system is paused during a scheduled update, it will automatically be resumed during the scheduled update time period and will billed accordingly.
 
-Below are the steps on how you can compute pause/resume your system:
+Follow the steps below to pause or resume compute for your system.
 
 ## Pausing Compute
 
