@@ -11,6 +11,7 @@ subcollection: db2wh-saas
 ---
 
 # Pause and resume
+{: #pause_resume}
 
 {: #scale}
 
@@ -39,6 +40,7 @@ For information about using the REST API to pause and resume, see [REST API](htt
 Follow the steps below to pause or resume compute for your system.
 
 ## Pausing Compute
+{: #pause_compute}
 
 ### Step 1: Navigate to Compute Settings
 Login as an IAM admin user and navigate to **Administration → Compute** in the console. Click on the **Pause now** button.  
@@ -57,6 +59,7 @@ After clicking confirm, the system will take a few minutes to complete the pause
 ![Database pause](images/database_paused.png)
 
 ## Resuming Compute
+{: #resume_compute}
 
 ### Step 4: Initiate Resume Operation
 When you’re ready to resume compute, log in again as an IAM admin user and click on the **Resume now** button.  
