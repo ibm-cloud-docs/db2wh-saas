@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2026-05-04"
+lastupdated: "2026-05-05"
 
 keywords:
 
@@ -61,7 +61,7 @@ After clicking confirm, the system will take a few minutes to complete the pause
 ### Step 4: Initiate Resume Operation
 When you’re ready to resume compute, log in again as an IAM admin user and click on the **Resume now** button.  
 
-![Database pause](images/database_paused.png)
+![Database pause](images/pause_database.png)
 
 
 ### Step 5: Wait for Resume Completion
