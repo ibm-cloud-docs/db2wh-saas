@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2026-02-20"
+lastupdated: "2026-05-11"
 
 keywords:
 
@@ -165,8 +165,6 @@ Before enabling Private connection, ensure the following are available in your e
 
 Complete the following steps to connect {{site.data.keyword.dashdblong}} with  private connection:
 
-
-
 ### Step 1: Log in to the console
 
 Log in to the {{site.data.keyword.dashdbshort_notm}} console. The console can be accessed with IAM users or IAM roles.
@@ -206,13 +204,33 @@ The Virtual Private Endpoint Gateway must be created in the same account as the 
 
 Ensure that TCP traffic is allowed through port **50001** and **443** on the VPC.
 
-### Step 6: Connect to Db2 Warehouse instance
+### Step 6: Identify Private Connection Details and Connect to Db2
 
-Once the [VPE-endpoint-gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui) is created successfully, you can connect to the Db2 Warehouse instance from your IBM Cloud VPC using the details in the **Private connections** tab (Step 3).
+After creating the VPE Gateway, go to the **Connections** section of your Db2 Warehouse console (see Step 3).
 
-### Step 7: Access Db2 Warehouse console privately
+- **For database drivers/CLI**: Use the private endpoint and port listed here to connect your applications to the database.  
+- **For the console UI**: Note the REST API hostname (for example, `private-vpe.db2w.cloud.ibm.com`). You will use this to construct your private browser URL in the next step.
 
-After creating [VPE-endpoint-gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui), you can access the Db2 Warehouse on Cloud console privately from your IBM Cloud VPC by replacing the public console hostname with the hostname listed as Rest API host name (Step 3).
+### Step 7: Access Db2 Warehouse Console Privately
+
+To access the web console from your VPC, update your public console URL. The console requires the full path (including the CRN) to identify your instance.
+
+1. Copy your existing public console URL (for example:  
+   `https://cv01...ibm.com/crn%3Av1%3A.../console/index.html`).  
+2. Replace the public hostname portion with the REST API hostname noted in Step 3.  
+3. Ensure the rest of the path (starting with `/crn%3A...`) remains exactly the same.
+
+**Example transformation:**
+
+- Public URL:  
+  `cv01cnlw0bhhi23jehtg.us-south.dev.db2w.cloud.ibm.com/crn%3Av1%3A.../console/index.html`  
+- Private URL:  
+  `private-vpe.db2w.cloud.ibm.com/crn%3Av1%3A.../console/index.html`  
+
+Accessing the VPE hostname alone, without the CRN path, will result in a 404 error.
+{: note}
+
+
 
 #### Additional resources
 

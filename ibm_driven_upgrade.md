@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2026-03-10"
+lastupdated: "2026-05-11"
 
 keywords:
 
@@ -67,14 +67,19 @@ If you encounter any issues during this process or need assistance in choosing t
    > Please make sure to update any bookmarks, scripts, or integrations that rely on the console URL.
    {: note}
 
+
+ 
 2. For most customers, you can resume working with your data as before. However, certain customers may encounter specific circumstances requiring further actions.
 
-*Private Connections from IBM Cloud VPC:* If you have workloads running on IBM Cloud VPC, you can leverage private connectivity (Private Link) to connect securely to your Db2 Warehouse instances using IBM Cloud’s private network. Follow the steps outlined [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-connect_options#connecting-to-db2-warehouse-on-cloud-with-private-link).
+
+**Private Connections from IBM Cloud VPC:** If you have workloads running on IBM Cloud VPC, you can leverage private connectivity (Private Link) to connect securely to your Db2 Warehouse instances using IBM Cloud’s private network. Follow the steps outlined [here](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-connect_options#connecting-to-db2-warehouse-on-cloud-with-private-link).
 
 To enable private connectivity:
 
-   * First, enable private connectivity through the console.
-   * Then, create a *Virtual Private Endpoint Gateway* on your VPC. The private endpoint and port will be provided in the Connections section of the console.
+   - First, enable private connectivity through the console.
+   - Then, create a **Virtual Private Endpoint Gateway** on your VPC. Once created, visit the Connections section of the console to find your private endpoint and port.
+     - **For database traffic**: Use the private endpoint and port directly in your drivers.  
+     - **For console access**: Use this endpoint as the hostname for your private URL. See [Step 7: Access Db2 Warehouse Console Privately](https://cloud.ibm.com/docs/db2wh-saas?topic=db2wh-saas-connect_options#step-7-access-db2-warehouse-console-privately) for details on URL construction.  
 
 Private connectivity is a *regional service*, meaning that the Virtual Private Endpoint Gateway must be created in the same region as your Db2 Warehouse on Cloud instance.
 {: note}
