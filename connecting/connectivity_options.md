@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2026-05-11"
+lastupdated: "2026-05-14"
 
 keywords:
 
@@ -209,11 +209,11 @@ Ensure that TCP traffic is allowed through port **50001** and **443** on the VPC
 After creating the VPE Gateway, go to the **Connections** section of your Db2 Warehouse console (see Step 3).
 
 - **For database drivers/CLI**: Use the private endpoint and port listed here to connect your applications to the database.  
-- **For the console UI**: Note the REST API hostname (for example, `private-vpe.db2w.cloud.ibm.com`). You will use this to construct your private browser URL in the next step.
+- **For the console UI**: Note the REST API hostname (for example, `private-vpe.db2w.cloud.ibm.com`). You will use this to construct your private console URL in the next step.
 
 ### Step 7: Access Db2 Warehouse Console Privately
 
-To access the web console from your VPC, update your public console URL. The console requires the full path (including the CRN) to identify your instance.
+To access the web console using VPE from your VPC, you will need to frame the URL based on your public console URL. The console requires the full path (including the CRN) to identify your instance.
 
 1. Copy your existing public console URL (for example:  
    `https://cv01...ibm.com/crn%3Av1%3A.../console/index.html`).  
