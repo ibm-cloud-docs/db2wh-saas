@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2026-05-14"
+lastupdated: "2026-06-01"
 
 keywords:
 
@@ -245,6 +245,8 @@ For more information, see [Ordering an endpoint gateway](https://cloud.ibm.com/d
 - You must create the Virtual private endpoint gateway in the same region where the {{site.data.keyword.dashdbshort_notm}} instance is deployed.
 
 - When you disable private connectivity, make sure to delete the VPE gateway as well.
+
+
 
 ## Using IP Allowlists with your Instance
 
