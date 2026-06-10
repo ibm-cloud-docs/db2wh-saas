@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2026-05-14"
+lastupdated: "2026-06-10"
 
 keywords:
 
@@ -79,7 +79,7 @@ To enable private connectivity:
    - First, enable private connectivity through the console.
    - Then, create a **Virtual Private Endpoint Gateway** on your VPC. Once created, visit the Connections section of the console to find your private endpoint and port.
    - **For database traffic**: Use the private endpoint and port directly in your drivers.  
-   - **For console access**: Use the private endpoint to frame your private console URL. See [Step 7: Access Db2 Warehouse Console Privately](https://cloud.ibm.com/docs/db2wh-saas?topic=db2wh-saas-connect_options#step-7-access-db2-warehouse-console-privately) for details on URL construction.  
+  
 
 Private connectivity is a *regional service*, meaning that the Virtual Private Endpoint Gateway must be created in the same region as your Db2 Warehouse on Cloud instance.
 {: note}

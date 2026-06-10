@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2026-06-01"
+lastupdated: "2026-06-10"
 
 keywords:
 
@@ -204,31 +204,16 @@ The Virtual Private Endpoint Gateway must be created in the same account as the 
 
 Ensure that TCP traffic is allowed through port **50001** and **443** on the VPC.
 
-### Step 6: Identify Private Connection Details and Connect to Db2
 
-After creating the VPE Gateway, go to the **Connections** section of your Db2 Warehouse console (see Step 3).
 
-- **For database drivers/CLI**: Use the private endpoint and port listed here to connect your applications to the database.  
-- **For the console UI**: Note the REST API hostname (for example, `private-vpe.db2w.cloud.ibm.com`). You will use this to construct your private console URL in the next step.
 
-### Step 7: Access Db2 Warehouse Console Privately
+### Step 6: Connect to Db2 Warehouse instance
 
-To access the web console using VPE from your VPC, you will need to frame the URL based on your public console URL. The console requires the full path (including the CRN) to identify your instance.
+Once the [VPE-endpoint-gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui) is created successfully, you can connect to the Db2 Warehouse instance from your IBM Cloud VPC using the details in the **Private connections** tab (Step 3).
 
-1. Copy your existing public console URL (for example:  
-   `https://cv01...ibm.com/crn%3Av1%3A.../console/index.html`).  
-2. Replace the public hostname portion with the REST API hostname noted in Step 3.  
-3. Ensure the rest of the path (starting with `/crn%3A...`) remains exactly the same.
+### Step 7: Access Db2 Warehouse console privately
 
-**Example transformation:**
-
-- Public URL:  
-  `cv01cnlw0bhhi23jehtg.us-south.dev.db2w.cloud.ibm.com/crn%3Av1%3A.../console/index.html`  
-- Private URL:  
-  `private-vpe.db2w.cloud.ibm.com/crn%3Av1%3A.../console/index.html`  
-
-Accessing the VPE hostname alone, without the CRN path, will result in a 404 error.
-{: note}
+After creating [VPE-endpoint-gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui), you can access the Db2 Warehouse on Cloud console privately from your IBM Cloud VPC by replacing the public console hostname with the hostname listed as Rest API host name (Step 3).
 
 
 
@@ -247,6 +232,62 @@ For more information, see [Ordering an endpoint gateway](https://cloud.ibm.com/d
 - When you disable private connectivity, make sure to delete the VPE gateway as well.
 
 
+## Accessing a Cross‑Account Db2 Warehouse Database with Private Connectivity
+{: #crossacnt_pvt}
+
+Follow these steps to set up access:
+
+### Step 1: Create an Authorization
+{: #create_auth}
+
+1. Log in to the [IBM Cloud Console](https://cloud.ibm.com/login).Use the account where the Db2 Warehouse instance is created and [private connectivity](https://cloud.ibm.com/docs/db2wh-saas?topic=db2wh-saas-connect_options#connect_pvtendpt) is enabled.  
+
+
+2. Go to **Manage → IAM → Authorizations → Create**.  
+   
+3. Configure the **Source**:  
+   - Select **Source account** and enter the specific account ID where you want to grant authorization.  
+   - Choose **Service: VPC Infrastructure Services**.  
+   - Select **Resources → Specific resources**, then set **Resource Type: Virtual Private Endpoint for VPC**.  
+  
+4. Configure the **Target**:  
+   - Choose **Service: Db2 Warehouse**.  
+   - Select **Resources: All resources**.  
+   - Assign **Role: Viewer**.  
+  
+5. Review the summary and click **Authorize/Save**.  
+
+![authorization summary](images/auth_summary.png)   
+
+6. Once successful, you’ll see a confirmation summary.  
+
+![manage authorization summary](images/manage_auth.png)
+
+### Step 2: Create a Virtual Private Endpoint (VPE) Gateway
+{: #create_vpe}
+
+1. Log in to the **IBM Cloud Console** (source account in which authorization was granted).  
+   
+2. Navigate to **Infrastructure → Network → Virtual Private Endpoint Gateway**.  
+   
+3. Click **Create** and fill in the details:  
+   - **Region**: Same region as the VPC.  
+   - **Name**: Provide a unique name for the gateway.  
+   - **Virtual Private Cloud**: Select the VPC where the gateway will be created.  
+   - **Enter CRN**: Provide the CRN of the Db2 Warehouse instance you want to access.  
+   - **Reserve IP**: Choose from available IP addresses.  
+
+   ![authorization sumaary](images/request_conn.png)
+  
+4. Click **Create Virtual Private Endpoint Gateway**.
+
+### Step 3: Connect to the Cross‑Account Instance
+{: #connect_instance}
+
+Once the gateway is created, you can connect to the Db2 Warehouse instance in the other account using:  
+
+- **Port**: 50001  
+- **Service endpoint**: Provided in the VPE Gateway details
 
 ## Using IP Allowlists with your Instance
 
