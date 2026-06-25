@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2020
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-25"
 
 keywords:
 
@@ -204,17 +204,32 @@ The Virtual Private Endpoint Gateway must be created in the same account as the 
 
 Ensure that TCP traffic is allowed through port **50001** and **443** on the VPC.
 
+### Step 6: Identify Private Connection Details and Connect to Db2
+
+After creating the VPE Gateway, go to the **Connections** section of your Db2 Warehouse console (see Step 3).
+
+- **For database drivers/CLI**: Use the private endpoint and port listed here to connect your applications to the database.  
+- **For the console UI**: Note the REST API hostname (for example, `private-vpe.db2w.cloud.ibm.com`). You will use this to construct your private console URL in the next step.
+
+### Step 7: Access Db2 Warehouse Console Privately
+
+To access the web console using VPE from your VPC, you will need to frame the URL based on your public console URL. The console requires the full path (including the CRN) to identify your instance.
 
 
+1. Copy your existing public console URL (for example:  
+   `https://cv01...ibm.com/crn%3Av1%3A.../console/index.html`).  
+2. Replace the public hostname portion with the REST API hostname noted in Step 3.  
+3. Ensure the rest of the path (starting with `/crn%3A...`) remains exactly the same.
 
-### Step 6: Connect to Db2 Warehouse instance
+**Example transformation:**
 
-Once the [VPE-endpoint-gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui) is created successfully, you can connect to the Db2 Warehouse instance from your IBM Cloud VPC using the details in the **Private connections** tab (Step 3).
+- Public URL:  
+  `cv01cnlw0bhhi23jehtg.us-south.dev.db2w.cloud.ibm.com/crn%3Av1%3A.../console/index.html`  
+- Private URL:  
+  `private-vpe.db2w.cloud.ibm.com/crn%3Av1%3A.../console/index.html`  
 
-### Step 7: Access Db2 Warehouse console privately
-
-After creating [VPE-endpoint-gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui), you can access the Db2 Warehouse on Cloud console privately from your IBM Cloud VPC by replacing the public console hostname with the hostname listed as Rest API host name (Step 3).
-
+Accessing the VPE hostname alone, without the CRN path, will result in a 404 error.
+{: note}
 
 
 #### Additional resources
@@ -240,7 +255,7 @@ Follow these steps to set up access:
 ### Step 1: Create an Authorization
 {: #create_auth}
 
-1. Log in to the [IBM Cloud Console](https://cloud.ibm.com/login).Use the account where the Db2 Warehouse instance is created and [private connectivity](https://cloud.ibm.com/docs/db2wh-saas?topic=db2wh-saas-connect_options#connect_pvtendpt) is enabled.  
+1. Log in to the [IBM Cloud Console](https://cloud.ibm.com/login). Use the account where the Db2 Warehouse instance is created and [private connectivity](https://cloud.ibm.com/docs/db2wh-saas?topic=db2wh-saas-connect_options#connect_pvtendpt) is enabled.  
 
 
 2. Go to **Manage → IAM → Authorizations → Create**.  
