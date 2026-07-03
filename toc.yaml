@@ -4,7 +4,7 @@ toc:
     service-name: dashdb
     category: database
     audience: service
-    href: /docs/db2wh-saas?topic=db2wh-saas-getting-started
+    href: /docs/db2wh-saas
     path: db2wh-saas
     label: Db2 Warehouse as a Service
   entries:
