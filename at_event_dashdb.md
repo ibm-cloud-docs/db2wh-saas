@@ -78,5 +78,3 @@ The following table lists the actions that generate an event for managing servic
 Events are available in the **Frankfurt (eu-de)** region.
 
 To view these events, you must [provision an instance](/docs/activity-tracker?topic=activity-tracker-provision#provision) of the {{site.data.keyword.at_full_notm}} service in the **Frankfurt (eu-de)** region. Then, you must [open the {{site.data.keyword.at_full_notm}} UI](/docs/activity-tracker?topic=activity-tracker-launch).
-
-</mezmo>
