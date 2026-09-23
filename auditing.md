@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2026-07-09"
+lastupdated: "2026-09-23"
 
 keywords:
 
@@ -90,16 +90,32 @@ The following table lists the events that get sent to Activity Tracker from {{si
 | `<service_id>.schema.create`| A schema was created. A "-failure" flag is included in the message if the attempt to delete a user failed. |
 
 The `<service_id>` field indicates the type of {{site.data.keyword.databases-for}} deployment. For example, `dashdb` or `messages-for-rabbitmq`.
-## Viewing events
+
+## Events workflow
 You can access Activity Tracker with LogDNA through the **Observability** tab of your deployment's **Manage** page. The **Manage Activity Tracker** button links to the main list of all Activity Tracker instances in your {{site.data.keyword.cloud_notm}} account. Select the instance where you set your database logs to be forwarded. {{site.data.keyword.at_full_notm}} can have only one instance per location. Click **View Activity Tracker** to view the events.
 
 After the event activity is forwarded to the service, each event can be expanded to a detailed view by clicking the arrow to the left of the time stamp.
 
 The Activity Tracker with LogDNA service offers [searching](/docs/log-analysis?topic=log-analysis-view_logs#view_logs_step6), [filtering](/docs/log-analysis?topic=log-analysis-view_logs#view_logs_step5), and [export](/docs/log-analysis?topic=log-analysis-export#export) of events so you can customize retention for your use case. You can also use it to configure [alerts](/docs/log-analysis?topic=log-analysis-alerts).
 
+## Observability
+
+Activity tracking events report on activities that change the state of a service in IBM Cloud. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
+
+You can use IBM Cloud Activity Tracker Event Routing, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About IBM Cloud Activity Tracker Event Routing](/docs/atracker?topic=atracker-about).
+
+You can use IBM Cloud Logs to visualize and alert on events that are generated in your account and routed by IBM Cloud Activity Tracker Event Routing to an IBM Cloud Logs instance.
+
+As a security officer, auditor, or manager, you can use the IBM Cloud Logs service to track how users and applications interact with the IBM Db2 Warehouse as a service in IBM Cloud.
+{: shortdesc}
+
+You can provision an instance of IBM Db2 Warehouse as a service through the [IBM Cloud catalog](https://cloud.ibm.com/db2-wh){: external}. [Learn more](/docs/account?topic=account-iamoverview).
+
+The IBM Cloud Logs service records user-initiated activities that change the state of a service in IBM Cloud. To get started monitoring your user's actions, see [IBM Cloud Logs](/docs/activity-tracker?topic=activity-tracker-getting-started). An initiator can be a user, a service, or an application.
+
 ## Database Auditing using Db2 Audit Facility 
 
-You can monitor data access in your {{site.data.keyword.dashdblong}} instance with the built-in Db2 audit facility. This features provides database-level auditing in addition to the audit capability described earlier. Use the Db2 audit facility to generate and maintain an audit trail for a series of predefined database events, including attempts to access or manipulate database objects, user authentication, SQL statement execution, and even access to the audit log. Use the audit log to reveal usage patterns that would identify system misuse, and in turn, take action to eliminate such misuse.
+You can monitor data access in your IBM Db2 Warehouse as a Service instance with the built-in Db2 audit facility. This features provides database-level auditing in addition to the audit capability described earlier. Use the Db2 audit facility to generate and maintain an audit trail for a series of predefined database events, including attempts to access or manipulate database objects, user authentication, SQL statement execution, and even access to the audit log. Use the audit log to reveal usage patterns that would identify system misuse, and in turn, take action to eliminate such misuse.
 {: shortdesc}
 
 It is highly recommended that your COS bucket is configured in the same region and platform (IBM Cloud Object Storage or AWS S3) as your Db2WoC instance. {: Attention}
@@ -258,3 +274,39 @@ SELECT * from CUSTOMERSCHEMA.VALIDATE
 ```
 
 See [Viewing archived audit records](https://www.ibm.com/docs/en/db2-warehouse?topic=activities-viewing-archived-audit-records) for guidance to perform the same task using the `db2audit` utiility.
+
+## Viewing activity tracking events for IBM Db2 Warehuse as a Service
+
+You can use IBM Cloud Logs to visualize and alert on events that are generated in your account and routed by IBM Cloud Activity Tracker Event Routing to an IBM Cloud Logs instance.
+
+### Launching IBM Db2 Warehouse as a service from the Observability page
+
+For information on launching the IBM Cloud Logs UI, see [Launching the UI in the {IBM Cloud Logs documentation.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
+
+## Platform events
+
+The following table lists the actions that generate an event:
+
+| Action                                   | Description |
+|------------------------------------------|---------|
+| `dashdb.instance.create`           | An event is generated when you provision a service instance. |
+| `dashdb.instance.update`           | An event is generated when you rename a service instance or when you change the service plan. |
+| `dashdb.instance.delete`           | An event is generated when a service instance is deleted. |
+| `dashdb.instance.schedule_reclaim` | An event is generated when a service instance is pending_reclamation. |
+| `dashdb.instance.restore`          | An event is generated when a service instance is restored. |
+{: caption="Actions that generate platform events" caption-side="top"}
+
+The following table lists the actions that generate an event for managing service credentials that are associated to a service instance:
+
+| Action                         | Description |
+|--------------------------------|---------|
+| `service_name.key.create` | An event is generated when an API key is created for a service instance through the *Service credentials* section of the service instance UI. |
+| `service_name.key.delete` | An event is generated when an API key that is associated with a service instance is deleted from the *Service credentials* section of the service instance UI. |
+{: caption="Actions that generate service credentials events" caption-side="top"}
+
+
+## Viewing platform events
+
+Events are available in the **Frankfurt (eu-de)** region.
+
+To view these events, you must [provision an instance](/docs/activity-tracker?topic=activity-tracker-provision#provision) of the IBM Cloud Logs service in the **Frankfurt (eu-de)** region. Then, you must [open the IBM Cloud Logs UI](/docs/activity-tracker?topic=activity-tracker-launch).
