@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2026-07-09"
 
 keywords:
 
@@ -166,7 +166,7 @@ This new method ensures that audit logs are consistently and reliably stored in 
     3. **Enter alias details**: Object Storage Alias name, endpoint type, endpoint URL of your bucket, S3 key ID and access key.
     4. **Access control**: Select "BLUADMIN" group for the appropriate access control
     5. **Test connection to ensure details are valid**: Click “Test Connection” and click “Next”.
-    6. **Select COS bucket**: From the dropdown menu, choose the the bucket and click “Next”.
+    6. **Select COS bucket**: From the dropdown menu, select a bucket and, optionally, a folder, then click "Next".
     7. **Review and Confirm**: Verify your settings and click “Connect” to finalize the configuration.
 2. **Navigate to the Audit Tab**: Access the Audit tab within the IBM Cloud console.
 3. **Initiate Audit**: Click "Enable Audit" to begin the process.
