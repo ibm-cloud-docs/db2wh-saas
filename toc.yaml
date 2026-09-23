@@ -70,7 +70,6 @@ toc:
           - roles.md
           - rcac.md
           - auditing.md
-          - at_event_dashdb.md
           - sec_comp_sum.md
           - key_protect.md
           - accesscont.md
